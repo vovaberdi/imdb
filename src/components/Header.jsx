@@ -4,6 +4,8 @@ import { AiFillHome } from "react-icons/ai";
 import { BsInfoCircleFill } from "react-icons/bs";
 import Link from "next/link";
 import DarkModeSwitch from "./DarkModeSwitch";
+
+
 export default function Header() {
   return (
     <div className="flex justify-between mx-2 max-w-6xl sm:mx-auto items-center py-6">
