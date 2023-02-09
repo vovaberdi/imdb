@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import {FiThumbsUp} from "react-icons/fi";
+import { FiThumbsUp } from "react-icons/fi";
 
 export default function Card({ result }) {
   return (
@@ -17,17 +17,20 @@ export default function Card({ result }) {
           width={500}
           height={300}
           className="sm:rounded-t-lg group-hover:opacity-80 transition duration-200"
-          style={{maxWidth: "100%", height: "auto",}}
+          style={{ maxWidth: "100%", height: "auto" }}
           placeholder="blur"
           blurDataURL="/spinner.svg"
           alt="image is not available"
         ></Image>
         <div className="">
-            <p className="line-clamp-2 text-md">{result.overview}</p>
-            <h2 className="truncate text-lg font-bold">{result.title || result.name}</h2>
-            <p className="flex items-center">{result.release_date || result.first_air_date}
+          <p className="line-clamp-2 text-md">{result.overview}</p>
+          <h2 className="truncate text-lg font-bold">
+            {result.title || result.name}
+          </h2>
+          <p className="flex items-center">
+            {result.release_date || result.first_air_date}
             <FiThumbsUp className="h-5 mr-1 ml-3" /> {result.vote_count}
-            </p>
+          </p>
         </div>
       </Link>
     </div>
